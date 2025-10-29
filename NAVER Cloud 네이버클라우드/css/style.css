@@ -12,7 +12,7 @@
 --btn-radius : 2rem;
 }
 
-
+/* 폰트 적용 */
 body {
   font-family: "Pretendard";
 }
@@ -22,7 +22,7 @@ header {
   background-image: linear-gradient(
     to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../images/slide01.png);
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 75vh;
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ header ul.btn{
 }
 header .btn > li {
   width: 11rem;
-  border: 0.2px solid rgba(255, 255, 255, 0.3);
+  border: 0.2px solid rgba(255, 255, 255, 0.2);
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 2rem;
@@ -101,6 +101,7 @@ header div.allow{
   font-weight: 600;
   display: flex;
   cursor: pointer;
+  gap: 0.5rem;
 }
 /* 1/6 페이지 수 */
 header .number{
@@ -108,40 +109,38 @@ header .number{
 }
 header.number>span{ color: #aaa;}
 
-@media screen and (min-width:1024px){
-  /* background-image: linear-gradient(
-    to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(); */
-}
+
 
 /* main 시작 */
 /* 원사진 정보 섹션 시작 */
 main>section#info{
   width: 100%;
-  height: 80vh;
-  overflow: hidden;
+  height: 75%;
+  padding: 1rem;
+  margin: 2rem 0;
   gap: 2rem;
-  
+  /* 네이버 클라우드 설명 */
   h3{ 
     color: #aaa;
     font-size: 1.5rem;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    text-align: center;
+    line-height: 2rem;
   }
   span{ color: var(--font);}
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* 소개바로가기 버튼 */
   p.btn{
     background-color: var(--font);
     color: var(--bg);
-    width: 7.5rem;
+    width: 8.5rem;
     font-size: 0.9rem;
     font-weight: 600;
     border-radius: 2rem;
     gap: 4rem 4rem;
-    padding: 0.9rem ;
+    padding: 1rem 1rem ;
     display: flex;
     justify-content: center;
     cursor: pointer;
@@ -161,13 +160,17 @@ main>section#info{
 /* 서비스 네모 섹션 시작 */
 #service{
   background-color: var(--bg-hover);
+  padding: 2rem;
 }
 #service>h3{
+  font-size: 1.5rem;
   color: #aaa;
+  line-height: 2rem;
 }
 #service>h3>span{
   color: var(--font);
 }
+/* 서비스 바로가기 버튼 */
 #service>p.btn{
     background-color: var(--font);
     color: var(--bg);
@@ -185,9 +188,14 @@ main>section#info{
       transition: 0.3s;
     }
   }
+#service>ul>li{
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/imgi_18_mo_clova_02.png);
+}
 /* 뉴스 섹션 시작 */
 /* 카드 버튼 섹션 시작 */
-section.card>p.btn{
+/* section#card>p.btn{
     background-color: var(--font);
     color: var(--bg);
     width: 7.5rem;
@@ -204,17 +212,19 @@ section.card>p.btn{
       color: var(--font);
       transition: 0.3s;
     }
-  }
+  } */
 /* footer 영역 시작 */
 footer{
   background-color: var(--bg-hover);
+  padding: 2rem;
+  gap: 2rem;
 }
-footer>p{
+/* footer>p{
   color: var(--font-hover);
   font-size: 12px;
   font-weight: 700;
   line-height: 1.3rem;
-}
+} */
 /* 네이버 클라우드 텍스트 로고 */
 footer>h3{
   color: var(--font);
@@ -222,30 +232,48 @@ footer>h3{
   font-weight: 900;
   
 }
-footer>div>img{
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+footer>.footer-wrap{
+  width: 100%;
+  margin: 0 auto;
 }
-footer>nav.btn{
+/* 아이콘 사진들 */
+footer>.footer-wrap>div.icons{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+footer>.footer-wrap>div.icons>img{
+  width: 3rem;
+  height: 3rem;
+  
+}
+/* 관계사 바로가기 버튼 */
+footer>.footer-wrap>.btn{
   color: var(--bg);
   background-color: var(--font-hover);
   border-radius: 4px;
-  width: 80%;
-    font-size: 0.9rem;
-    font-weight: 600;
-    gap: 4rem 4rem;
-    padding: 0.9rem ;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 4rem 4rem;
+  padding: 0.9rem ;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
     &:hover{
       background-color: var(--font);
       transition: 0.3s;
     }
-  
 }
 footer>nav.btn>p{
-  /* font-weight: 600; */
+  font-weight: 600;
+}
+
+/* 데스크탑 버전 */
+@media screen and (min-width:1024px){
+  header{
+  background-image: linear-gradient(
+    to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../images/slide_01.jpg);
+    }
 }
