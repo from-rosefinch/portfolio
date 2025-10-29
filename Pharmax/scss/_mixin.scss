@@ -1,0 +1,18 @@
+@mixin flex-layout($direction:row,$justify:center,$align:center,$gap:1rem){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+// 반응형 구간에 따른 정의 (이때 모바일은 기본이라 안 넣어도 됨)
+@mixin tablet{
+    @media all and (min-width:768px) {
+        @content;
+    }
+}
+@mixin desktop{
+    @media all and (min-width:1200px) {
+        @content;
+    }
+}

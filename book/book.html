@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/book.css" />
+    <title>BOOK</title>
+  </head>
+  <body>
+    <div id="wrap">
+    <main>
+      <div class="book-img">
+        <div class="page">
+          <div class="front"></div>
+          <div class="back"></div>
+        </div>
+        <div class="side"></div>
+      </div>
+    </main>
+
+    <section>
+        <h1>처음 사는 인생, 누구나 서툴지</h1>
+        <br />
+        <p>지은이 | 나태주</p>
+        <br />
+
+    <h3>
+      "이제 지나온 그림자를 지우지 못해 안달하지도 말고<br />다가올 날의
+      해짧음을 아쉬워하지도 말자"
+    </h3>
+    <br />
+    <p>
+      우리의 오늘이 서툴고 힘든 건 인생이 처음이어서다.
+      <br>나의 잘못도, 나의 미숙도, 나의 과거의 그 무엇도 문제가 없다. 
+      <br>그저 삶을 처음 살아보기에 매 발걸음이 두려울 수밖에 없는 것이다.
+      <br>나태주 시인은 ‘나만 그런 것이 아니라
+      다른 사람들도 그렇다고 생각하면 훨씬 마음이 편해질 것’이라 말한다.
+      <br>사람들이 앞서간 시인들의 시를 읽으며 지치지 않고, 포지하지 않고, 인생의 종점까지 뚜벅뚜벅
+      걸어가기를 그는 희망한다.
+      <br>『처음 사는 인생, 누구나 서툴지』는 그러한
+      나태주 시인의 소망이 담긴 시집이다.
+    </p>
+</section>
+</div>
+    <script>
+      const book = document.querySelector(".book-img");
+      book.addEventListener("click", () => {
+        book.classList.toggle("flipped");
+      });
+    </script>
+  </body>
+</html>

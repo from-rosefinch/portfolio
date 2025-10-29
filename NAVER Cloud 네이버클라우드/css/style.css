@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+:root{
+--main : #117CE9;
+--hover : #0D5DAF;
+--sub : #07B4EB;
+--font : #1E1E1E;
+--font-hover : #999;
+--bg : #fff;
+--bg-hover : #f9f9f9;
+--padding : 1rem 2rem;
+--btn-radius : 2rem;
+}
+
+
+body {
+  font-family: "Pretendard";
+}
+
+/* 헤더 시작 */
+header {
+  background-image: linear-gradient(
+    to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(../images/slide01.png);
+  background-size: cover;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--bg);
+}
+.bar{
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 상단바 네이버 클라우드 텍스트로고 */
+header .bar a {
+  font-size: 1.4rem;
+  font-weight: 800;
+  cursor: pointer;
+  
+}
+/* 상단바 언어, 메뉴바 아이콘 */
+header .bar div.icons {
+  font-size: 1.3rem;
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  
+}
+header .bar div.icons:nth-child(1):hover{
+  color:var(--main);
+}
+/* 제목과 버튼 아이콘 그룹 */
+header .banner-text {
+  font-size: 1rem;
+  margin: 2rem;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+/* 상업용 오픈소스 출시 */
+header .banner-text>h1{
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+/* 자세히 보기, 바로 시작하기 버튼 */
+header ul.btn{
+  font-size: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+header .btn > li {
+  width: 11rem;
+  border: 0.2px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  gap: 4rem 4rem;
+  padding: 0.8rem ;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  &:hover{
+    border: 1px solid #fff;
+    transition: 0.3s;
+  }
+}
+/* 헤더 하단바 */
+header .bottom-var{
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 2rem;
+  gap: 1.5rem;
+}
+/* 화살표 */
+header div.allow{
+  font-size: 2.2rem;
+  font-weight: 600;
+  display: flex;
+  cursor: pointer;
+}
+/* 1/6 페이지 수 */
+header .number{
+  font-size: 1rem;
+}
+header.number>span{ color: #aaa;}
+
+@media screen and (min-width:1024px){
+  /* background-image: linear-gradient(
+    to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(); */
+}
+
+/* main 시작 */
+/* 원사진 정보 섹션 시작 */
+main>section#info{
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  gap: 2rem;
+  
+  h3{ 
+    color: #aaa;
+    font-size: 1.5rem;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  span{ color: var(--font);}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p.btn{
+    background-color: var(--font);
+    color: var(--bg);
+    width: 7.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    gap: 4rem 4rem;
+    padding: 0.9rem ;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--main);
+      transition: 0.3s;
+    }
+  }
+  .img-circle{
+    img{
+      width: 90%;
+      margin: 0 auto;
+      
+    }
+  }
+}
+/* 서비스 네모 섹션 시작 */
+#service{
+  background-color: var(--bg-hover);
+}
+#service>h3{
+  color: #aaa;
+}
+#service>h3>span{
+  color: var(--font);
+}
+#service>p.btn{
+    background-color: var(--font);
+    color: var(--bg);
+    width: 7.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    gap: 4rem 4rem;
+    padding: 0.9rem ;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--main);
+      transition: 0.3s;
+    }
+  }
+/* 뉴스 섹션 시작 */
+/* 카드 버튼 섹션 시작 */
+section.card>p.btn{
+    background-color: var(--font);
+    color: var(--bg);
+    width: 7.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    gap: 4rem 4rem;
+    padding: 0.9rem ;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--bg);
+      color: var(--font);
+      transition: 0.3s;
+    }
+  }
+/* footer 영역 시작 */
+footer{
+  background-color: var(--bg-hover);
+}
+footer>p{
+  color: var(--font-hover);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3rem;
+}
+/* 네이버 클라우드 텍스트 로고 */
+footer>h3{
+  color: var(--font);
+  font-size: 1.5rem;
+  font-weight: 900;
+  
+}
+footer>div>img{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer>nav.btn{
+  color: var(--bg);
+  background-color: var(--font-hover);
+  border-radius: 4px;
+  width: 80%;
+    font-size: 0.9rem;
+    font-weight: 600;
+    gap: 4rem 4rem;
+    padding: 0.9rem ;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &:hover{
+      background-color: var(--font);
+      transition: 0.3s;
+    }
+  
+}
+footer>nav.btn>p{
+  /* font-weight: 600; */
+}

@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+
+@font-face {
+        font-family: "MapoFlowerIsland";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff")
+          format("woff");
+        font-weight: normal;
+        font-display: swap;
+      }
+
+body{
+    font-family: "MapoFlowerIsland";
+}
+#wrap{
+    display: flex;
+        justify-content: center;
+    align-items: center;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 900px;
+}
+.book-img{
+    width: 405px;
+    height: 600px;
+    position: relative;
+    /* transform: rotateY(90deg); */
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    background-size: contain;
+}
+.book-img.flipped{
+    transform: rotateY(180deg);
+    cursor: url(../image/arow-2.png),auto;
+}
+.book-img:not(.flipped):hover{
+    transform: rotateY(45deg);
+    cursor: url(../image/arow-2.png),auto;
+    
+}
+.page{
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    
+}
+.page>div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* backface-visibility: hidden; */
+}
+.front{
+    background-image: url(../image/처음\ 사는\ 인생\,\ 누구나\ 서툴지\ 앞면.jfif);
+    transform: translateZ(47px);
+}
+.back{
+    background-image: url(../image/처음\ 사는\ 인생\,\ 누구나\ 서툴지\ 뒷면.jfif);
+    transform: translateZ(-47px) rotateY(180deg);
+}
+.side{
+    background-image: url(../image/처음\ 사는\ 인생\,\ 누구나\ 서툴지\ 옆면.jfif);
+    width: 94px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -47px;
+    transform: rotateY(-90deg);
+}

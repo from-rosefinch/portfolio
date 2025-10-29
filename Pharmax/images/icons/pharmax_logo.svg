@@ -1,0 +1,84 @@
+<svg
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <defs>
+        <linearGradient
+          id="pillGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop
+            offset="0%"
+            style={{ stopColor: "#06b6d4", stopOpacity: 1 }}
+          />
+          <stop
+            offset="50%"
+            style={{ stopColor: "#3b82f6", stopOpacity: 1 }}
+          />
+          <stop
+            offset="100%"
+            style={{ stopColor: "#14b8a6", stopOpacity: 1 }}
+          />
+        </linearGradient>
+      </defs>
+
+      {/* First pill - rotated 45 degrees */}
+      <g transform="translate(50, 50) rotate(45) translate(-50, -50)">
+        <rect
+          x="30"
+          y="42"
+          width="40"
+          height="16"
+          rx="8"
+          fill="url(#pillGradient)"
+          opacity="0.9"
+        />
+        {/* Pill center line */}
+        <line
+          x1="50"
+          y1="42"
+          x2="50"
+          y2="58"
+          stroke="white"
+          strokeWidth="1.5"
+          opacity="0.6"
+        />
+      </g>
+
+      {/* Second pill - rotated -45 degrees */}
+      <g transform="translate(50, 50) rotate(-45) translate(-50, -50)">
+        <rect
+          x="30"
+          y="42"
+          width="40"
+          height="16"
+          rx="8"
+          fill="url(#pillGradient)"
+          opacity="0.9"
+        />
+        {/* Pill center line */}
+        <line
+          x1="50"
+          y1="42"
+          x2="50"
+          y2="58"
+          stroke="white"
+          strokeWidth="1.5"
+          opacity="0.6"
+        />
+      </g>
+
+      {/* Center highlight circle */}
+      <circle
+        cx="50"
+        cy="50"
+        r="6"
+        fill="white"
+        opacity="0.3"
+      />
+    </svg>
